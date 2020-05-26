@@ -46,7 +46,7 @@ def self.alphabetical
 end 
 
 def self.new_from_filename(filename)
-  song_data = filename.sub!(/.mp3/,'').split('-')
+  song_data = filename.sub!(/.mp3/,'').split(' - ')
   
   song = self.new 
   song.artist_name = song_data[0]
